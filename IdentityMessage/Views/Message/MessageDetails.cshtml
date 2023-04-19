@@ -1,0 +1,16 @@
+﻿@model EntityLayer.Message
+@{
+    ViewData["Title"] = "MessageDetails";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+<h1>Mesaj Detay Sayfası</h1>
+<br />
+@Html.HiddenFor(x=>x.MessageID, new {@class ="form-control"})
+<br />
+@Html.Label("Mesaj Başlığı")
+@Html.TextBoxFor(x=>x.Subject, new {@class ="form-control"})
+<br />
+@Html.Label("Mesaj İçeriği")
+@Html.TextAreaFor(x=>x.MessageContent, new {@class ="form-control"})
+<br />
+<td><a href="/Message/Inbox/" class="btn btn-success">Gelen Mesajlara Dön</a></td>
